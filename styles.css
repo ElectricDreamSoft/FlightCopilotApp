@@ -1,0 +1,31 @@
+:root{
+  --bg:#0e0f12;--panel:#14161a;--text:#e9eef5;--muted:#a9b4c3;
+  --brand:#22a559;--border:#2a2f37;--ghost:rgba(34,165,89,.14);
+}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:16px/1.55 -apple-system,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:20px}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+.site-header,.site-footer{background:var(--panel);border-bottom:1px solid var(--border)}
+.site-footer{border-top:1px solid var(--border);border-bottom:none}
+.brand{display:flex;align-items:center;gap:10px}.brand-icon{width:28px;height:28px;border-radius:6px}
+.nav{display:flex;gap:16px;margin-left:auto}
+.site-header .wrap{display:flex;align-items:center;gap:20px}
+.hero{padding:36px 0 8px;background:linear-gradient(180deg,rgba(34,165,89,.08),transparent 60%)}
+.grid2{display:grid;gap:28px;grid-template-columns:1.1fr 1fr}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}}
+h1{font-size:40px;line-height:1.15;margin:0 0 12px}h2{font-size:28px;margin:0 0 16px}h3{font-size:20px;margin:0 0 8px}
+.lead{color:var(--muted);font-size:18px}
+.cta{display:flex;gap:12px;margin:16px 0 18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:10px;border:1px solid var(--border);font-weight:600}
+.btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+.btn.ghost{background:var(--ghost);color:var(--brand)}
+.section{padding:36px 0}.alt{background:var(--panel)}
+.cards{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.cards{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px}
+.gallery{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.gallery{grid-template-columns:1fr}}
+img.thumb{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--border)}
+.caption{color:var(--muted);font-size:13px;margin-top:6px}
+.muted{color:var(--muted)}
