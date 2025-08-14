@@ -4,17 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flight Copilot – Privacy Policy</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>main{max-width:820px;margin:0 auto;padding:24px 20px}</style>
+  <style>
+    main { max-width: 820px; margin: 0 auto; padding: 24px 20px; font-family: sans-serif; line-height: 1.5; }
+    h1, h2, h3 { font-weight: 600; }
+    .muted { color: #666; font-size: 0.9em; }
+    ul { padding-left: 20px; }
+    a { color: #0066cc; }
+    header, footer { background: #f5f5f5; padding: 12px 20px; }
+    .brand { display: flex; align-items: center; gap: 8px; font-size: 1.2em; }
+    .brand-icon { width: 32px; height: 32px; }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <div class="brand">
-      <img src="img/icon.png" alt="Flight Copilot icon" class="brand-icon" />
-      <strong>Flight Copilot</strong>
-    </div>
-    <nav class="nav"><a href="index.html">Home</a></nav>
+<header>
+  <div class="brand">
+    <img src="img/icon.png" alt="Flight Copilot icon" class="brand-icon" />
+    <strong>Flight Copilot</strong>
   </div>
 </header>
 
@@ -33,10 +38,10 @@
   </ul>
 
   <h2>Data we process</h2>
-  <p><strong>On-device only:</strong> the App reads device sensors (e.g., accelerometer/gyroscope for turbulence & horizon; barometer for cabin pressure/cabin altitude; location for nearest-airport detection). These readings are used in real time and may be stored locally in your flight log on the device. We do not receive this data.</p>
+  <p><strong>On-device only:</strong> The App reads device sensors (e.g., accelerometer/gyroscope for turbulence &amp; horizon; barometer for cabin pressure/cabin altitude; location for nearest-airport detection). These readings are used in real time and may be stored locally in your flight log on the device. We do not receive this data.</p>
 
   <h3>Location</h3>
-  <p>The App may request permission to access location to set origin/destination airports automatically. Location is used on-device and (at launch) is not sent to any server. You can disable location in iOS Settings.</p>
+  <p>The App may request permission to access location to set origin/destination airports automatically. Location is used on-device and is not sent to any server. You can disable location in iOS Settings.</p>
 
   <h3>Crash diagnostics (optional)</h3>
   <p>If you enable “Share with App Developers” in iOS, Apple may share anonymised crash reports and basic device information with us (e.g., iOS version, device model). We use these solely to fix stability issues. We cannot identify you from these reports.</p>
@@ -48,7 +53,7 @@
     <li>No advertising identifiers, tracking, or profiling</li>
   </ul>
 
-  <h2>Data storage & retention</h2>
+  <h2>Data storage &amp; retention</h2>
   <p>Your flight logs and settings are stored locally on your device and remain until you delete them or uninstall the App. We do not operate a backend service for this data.</p>
 
   <h2>Children</h2>
@@ -68,15 +73,14 @@
   <p>Publisher: Electric Dream Software</p>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <p class="muted">© <span id="y"></span> Flight Copilot.</p>
-  </div>
+<footer>
+  <p class="muted">© <span id="y"></span> Flight Copilot.</p>
 </footer>
+
 <script>
-  const now=new Date();
-  document.getElementById('y').textContent=now.getFullYear();
-  document.getElementById('d').textContent=now.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
+  const now = new Date();
+  document.getElementById('y').textContent = now.getFullYear();
+  document.getElementById('d').textContent = now.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
 </script>
 </body>
 </html>
