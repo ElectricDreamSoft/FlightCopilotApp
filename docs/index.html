@@ -3,104 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flight Copilot – In-flight stats for passengers</title>
-  <meta name="description" content="Flight Copilot shows real-time turbulence, cabin pressure (cabin altitude), horizon, and logs — optimised for long flights and works offline." />
-  <link rel="icon" href="img/logo.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Flight CoPilot – Electric Dream Software Ltd</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 3rem 1rem; color: #333; }
+    img { height: 100px; margin-bottom: 1rem; }
+    h1 { margin: 0.5rem 0; }
+    p { color: #555; }
+    footer { margin-top: 2rem; font-size: 0.9em; color: #666; }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <div class="brand">
-        <img src="img/logo.png" alt="Flight Copilot logo" class="brand-icon" />
-        <strong>Flight Copilot</strong>
-      </div>
-      <nav class="nav">
-        <a href="#features">Features</a>
-        <a href="#screens">Screenshots</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-    </div>
-  </header>
+  <img src="img/logo.png" alt="Flight CoPilot logo">
+  <h1>Flight CoPilot</h1>
+  <p><em>Electric Dream Software Ltd</em></p>
+  <p>Coming soon.</p>
+  <p><a href="privacy.html">Privacy Policy</a></p>
 
-  <main>
-    <section class="hero">
-      <div class="wrap grid2">
-        <div>
-          <h1>In-flight stats for passengers</h1>
-          <p class="lead">Real-time turbulence graph & meter, cabin pressure (cabin altitude), artificial horizon, and flight logging. Built for long flights. Works fully offline.</p>
-          <div class="cta">
-            <a class="btn primary" href="#" aria-label="App Store link coming soon">Get Flight Copilot</a>
-            <a class="btn ghost" href="privacy.html">Privacy Policy</a>
-          </div>
-          <ul class="muted">
-            <li>Turbulence: continuous graph + live meter (spike-biased)</li>
-            <li>Cabin pressure / cabin altitude readouts</li>
-            <li>Pitch/Roll artificial horizon</li>
-            <li>Battery-conscious long-session design</li>
-            <li>Offline: airplane-mode friendly</li>
-          </ul>
-        </div>
-        <figure>
-          <img class="thumb" src="img/hero.jpg" alt="Flight Copilot UI preview on iPhone" />
-          <figcaption class="caption">UI preview (simulated)</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="features" class="section">
-      <div class="wrap">
-        <h2>Highlights</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Turbulence, visualised</h3>
-            <p>Live meter and graph emphasise sharp g-force spikes; gradual turns are de-emphasised.</p>
-          </article>
-          <article class="card">
-            <h3>Cabin pressure clarity</h3>
-            <p>Cabin altitude helps you understand pressurisation phases across climb, cruise, and descent.</p>
-          </article>
-          <article class="card">
-            <h3>Private & offline</h3>
-            <p>No account, no cloud. Sensors are processed on-device. See Privacy for details.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="screens" class="section alt">
-      <div class="wrap">
-        <h2>Screenshots</h2>
-        <div class="gallery">
-          <figure>
-            <img class="thumb" src="img/screenshot-1.jpg" alt="Turbulence graph and meter" />
-            <figcaption class="caption">Turbulence graph & meter</figcaption>
-          </figure>
-          <figure>
-            <img class="thumb" src="img/screenshot-2.jpg" alt="Cabin pressure and cabin altitude" />
-            <figcaption class="caption">Cabin pressure / cabin altitude</figcaption>
-          </figure>
-          <figure>
-            <img class="thumb" src="img/screenshot-3.jpg" alt="Artificial horizon view" />
-            <figcaption class="caption">Artificial horizon</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <h2>Support</h2>
-        <p>Questions? Email <a href="mailto:support@electricdreamsoftware.com">support@electricdreamsoftware.com</a>.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <p class="muted">© <span id="y"></span> Flight Copilot. All rights reserved • <a href="privacy.html">Privacy</a></p>
-    </div>
+  <footer>
+    © <span id="y"></span> Electric Dream Software Ltd
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
