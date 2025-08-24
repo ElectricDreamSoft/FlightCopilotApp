@@ -4,22 +4,93 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Electric Dream Software Ltd</title>
+  <meta name="description" content="Electric Dream Software Ltd — official site. Coming soon." />
+  <meta name="theme-color" content="#000000" />
+
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 3rem 1rem; color: #333; }
-    img { height: 100px; margin-bottom: 1rem; }
-    h1 { margin: 0.5rem 0; }
-    p { color: #555; font-size: 1.1em; }
-    footer { margin-top: 2rem; font-size: 0.9em; color: #666; }
+    :root{
+      --bg:#000; 
+      --fg:#f5f5f7; 
+      --muted:#a1a1a6; 
+      --ring:#1c1c1e;
+      --grad-a:#9ee7ff;   /* tune to match logo if desired */
+      --grad-b:#b49bff;
+      --grad-c:#ff7ad9;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--fg);
+      font:16px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+    }
+    .wrap{
+      min-height:100svh;
+      display:grid;
+      place-items:center;
+      padding:40px 20px;
+    }
+    .card{
+      text-align:center;
+      padding:48px 28px 40px;
+      border:1px solid var(--ring);
+      border-radius:20px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      box-shadow:0 10px 40px rgba(0,0,0,0.45);
+      max-width:560px;
+      width:100%;
+    }
+    .logo{
+      width:min(180px, 60vw);
+      height:auto;
+      margin:0 auto 18px;
+      display:block;
+      filter: drop-shadow(0 6px 24px rgba(147, 128, 255, 0.15));
+    }
+    h1{
+      margin:0 0 8px;
+      font-weight:700;
+      letter-spacing:-0.01em;
+      font-size:clamp(22px, 3.4vw, 28px);
+      text-transform:uppercase; /* all caps */
+    }
+    .sub{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:clamp(15px, 2.6vw, 17px);
+    }
+    .rule{
+      height:1px;
+      width:120px;
+      margin:14px auto 0; /* tightened spacing */
+      background:linear-gradient(90deg, var(--grad-a), var(--grad-b), var(--grad-c));
+      border-radius:999px;
+      opacity:.9;
+    }
+    footer{
+      margin-top:24px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    @media (prefers-reduced-motion:no-preference){
+      .card{ transition:transform .4s ease, box-shadow .4s ease }
+      .card:hover{ transform:translateY(-2px); box-shadow:0 14px 48px rgba(0,0,0,0.55) }
+    }
   </style>
 </head>
 <body>
-  <img src="img/logo.png" alt="Electric Dream Software logo">
-  <h1>Electric Dream Software Ltd</h1>
-  <p>Company website coming soon.</p>
+  <main class="wrap">
+    <section class="card" aria-label="Coming soon">
+      <img class="logo" src="img/logo.png" alt="Electric Dream Software logo">
+      <h1>Electric Dream Software Ltd</h1>
+      <p class="sub">website coming soon</p>
+      <div class="rule" aria-hidden="true"></div>
+      <footer>© <span id="y"></span> Electric Dream Software Ltd</footer>
+    </section>
+  </main>
 
-  <footer>
-    © <span id="y"></span> Electric Dream Software Ltd
-  </footer>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
