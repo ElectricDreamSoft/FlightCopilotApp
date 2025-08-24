@@ -12,10 +12,11 @@
       --bg:#000;
       --fg:#f5f5f7;
       --muted:#a1a1a6;
-      /* tune these to your logo */
-      --grad-a:#9ee7ff;
-      --grad-b:#b49bff;
-      --grad-c:#ff7ad9;
+      /* Colour stops with no green */
+      --grad-a:#9ee7ff;   /* light blue */
+      --grad-b:#b49bff;   /* violet */
+      --grad-c:#ff7ad9;   /* magenta/pink */
+      --grad-d:#ffd27a;   /* warm gold */
     }
     html,body{height:100%}
     body{
@@ -58,24 +59,20 @@
       font-size:clamp(15px, 2.6vw, 17px);
     }
 
-    /* Multicolour line that stays multicolour, with subtle motion */
+    /* Multicolour line with shimmer animation */
     .rule{
       height:1px;
       width:120px;
-      margin:6px auto 0; /* closer to the text */
+      margin:6px auto 0;
       border-radius:999px;
       opacity:.95;
-      /* 3 stripes packed into 60px; repeats across 120px so multiple colours are always visible */
-      background-image: linear-gradient(90deg,
-        var(--grad-a) 0%,   var(--grad-a) 33.333%,
-        var(--grad-b) 33.333%, var(--grad-b) 66.666%,
-        var(--grad-c) 66.666%, var(--grad-c) 100%
+      background:linear-gradient(90deg,
+        var(--grad-a) 0%,
+        var(--grad-b) 33%,
+        var(--grad-c) 66%,
+        var(--grad-d) 100%
       );
-      background-size: 60px 100%;
-      background-repeat: repeat-x;
-      background-position: 0% 50%;
-      animation: slide 24s linear infinite;
-      will-change: background-position;
+      animation: shimmer 12s ease-in-out infinite;
     }
 
     footer{
@@ -84,13 +81,13 @@
       font-size:14px;
     }
 
-    @keyframes slide {
-      from { background-position: 0% 50%; }
-      to   { background-position: 100% 50%; }
+    @keyframes shimmer {
+      0%, 100% { filter:brightness(1); }
+      50%      { filter:brightness(1.4); }
     }
 
     @media (prefers-reduced-motion: reduce){
-      .rule{ animation: none; }
+      .rule{ animation:none; }
     }
   </style>
 </head>
