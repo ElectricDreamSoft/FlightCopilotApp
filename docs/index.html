@@ -35,10 +35,9 @@
     .card{
       text-align:center;
       padding:48px 28px 40px;
-      border:1px solid var(--ring);
-      border-radius:20px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      box-shadow:0 10px 40px rgba(0,0,0,0.45);
+      /* removed border + border-radius */
+      background:transparent;
+      box-shadow:none; /* optional: removes hover shadow as well */
       max-width:560px;
       width:100%;
     }
@@ -47,7 +46,6 @@
       height:auto;
       margin:0 auto 18px;
       display:block;
-      filter: drop-shadow(0 6px 24px rgba(147, 128, 255, 0.15));
     }
     h1{
       margin:0 0 8px;
@@ -64,7 +62,7 @@
     .rule{
       height:1px;
       width:120px;
-      margin:14px auto 0; /* tightened spacing */
+      margin:14px auto 0;
       background:linear-gradient(90deg, var(--grad-a), var(--grad-b), var(--grad-c));
       border-radius:999px;
       opacity:.9;
@@ -74,10 +72,6 @@
       color:var(--muted);
       font-size:14px;
     }
-    @media (prefers-reduced-motion:no-preference){
-      .card{ transition:transform .4s ease, box-shadow .4s ease }
-      .card:hover{ transform:translateY(-2px); box-shadow:0 14px 48px rgba(0,0,0,0.55) }
-    }
   </style>
 </head>
 <body>
@@ -85,7 +79,7 @@
     <section class="card" aria-label="Coming soon">
       <img class="logo" src="img/logo.png" alt="Electric Dream Software logo">
       <h1>Electric Dream Software Ltd</h1>
-      <p class="sub">website coming soon</p>
+      <p class="sub">website coming soon.</p>
       <div class="rule" aria-hidden="true"></div>
       <footer>© <span id="y"></span> Electric Dream Software Ltd</footer>
     </section>
