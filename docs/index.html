@@ -9,10 +9,11 @@
 
   <style>
     :root{
-      --bg:#000; 
-      --fg:#f5f5f7; 
-      --muted:#a1a1a6; 
-      --grad-a:#9ee7ff;   /* tune to match logo if desired */
+      --bg:#000;
+      --fg:#f5f5f7;
+      --muted:#a1a1a6;
+      /* tune these to your logo */
+      --grad-a:#9ee7ff;
       --grad-b:#b49bff;
       --grad-c:#ff7ad9;
     }
@@ -56,25 +57,40 @@
       color:var(--muted);
       font-size:clamp(15px, 2.6vw, 17px);
     }
+
+    /* Multicolour line that stays multicolour, with subtle motion */
     .rule{
       height:1px;
       width:120px;
-      margin:6px auto 0;
-      background:linear-gradient(90deg, var(--grad-a), var(--grad-b), var(--grad-c));
+      margin:6px auto 0; /* closer to the text */
       border-radius:999px;
-      opacity:.9;
-      animation: rotateGrad 20s linear infinite;
+      opacity:.95;
+      /* 3 stripes packed into 60px; repeats across 120px so multiple colours are always visible */
+      background-image: linear-gradient(90deg,
+        var(--grad-a) 0%,   var(--grad-a) 33.333%,
+        var(--grad-b) 33.333%, var(--grad-b) 66.666%,
+        var(--grad-c) 66.666%, var(--grad-c) 100%
+      );
+      background-size: 60px 100%;
+      background-repeat: repeat-x;
+      background-position: 0% 50%;
+      animation: slide 24s linear infinite;
+      will-change: background-position;
     }
+
     footer{
       margin-top:24px;
       color:var(--muted);
       font-size:14px;
     }
 
-    @keyframes rotateGrad {
-      0%   { background:linear-gradient(90deg, var(--grad-a), var(--grad-b), var(--grad-c)); }
-      50%  { background:linear-gradient(180deg, var(--grad-a), var(--grad-b), var(--grad-c)); }
-      100% { background:linear-gradient(270deg, var(--grad-a), var(--grad-b), var(--grad-c)); }
+    @keyframes slide {
+      from { background-position: 0% 50%; }
+      to   { background-position: 100% 50%; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .rule{ animation: none; }
     }
   </style>
 </head>
