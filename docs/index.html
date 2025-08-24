@@ -52,19 +52,18 @@
       text-transform:uppercase;
     }
     .sub{
-      margin:0 0 12px; /* tighter below text */
+      margin:0 0 12px;
       color:var(--muted);
       font-size:clamp(15px, 2.6vw, 17px);
     }
     .rule{
       height:1px;
       width:120px;
-      margin:6px auto 0; /* closer to the text */
+      margin:6px auto 0;
       background:linear-gradient(90deg, var(--grad-a), var(--grad-b), var(--grad-c));
-      background-size:300% 100%;
       border-radius:999px;
       opacity:.9;
-      animation: shift 12s ease-in-out infinite;
+      animation: rotateGrad 20s linear infinite;
     }
     footer{
       margin-top:24px;
@@ -72,10 +71,10 @@
       font-size:14px;
     }
 
-    @keyframes shift {
-      0%   { background-position:0% 50%; }
-      50%  { background-position:100% 50%; }
-      100% { background-position:0% 50%; }
+    @keyframes rotateGrad {
+      0%   { background:linear-gradient(90deg, var(--grad-a), var(--grad-b), var(--grad-c)); }
+      50%  { background:linear-gradient(180deg, var(--grad-a), var(--grad-b), var(--grad-c)); }
+      100% { background:linear-gradient(270deg, var(--grad-a), var(--grad-b), var(--grad-c)); }
     }
   </style>
 </head>
