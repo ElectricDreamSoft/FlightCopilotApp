@@ -10,8 +10,8 @@
     :root{
       --bg:#000; --fg:#f5f5f7; --muted:#a1a1a6;
       --grad-a:#9ee7ff; --grad-b:#b49bff; --grad-c:#ff7ad9; --grad-d:#ffd27a;
-      --logo:52px;        /* slightly smaller header logo height */
-      --footerW:260px;    /* shared width for footer logo and copyright text */
+      --logo:52px;        /* header logo height */
+      --footerW:200px;    /* shared width for footer logo and copyright text */
     }
     body{
       margin:0; background:var(--bg); color:var(--fg);
@@ -24,13 +24,14 @@
     /* Header */
     .header{
       display:flex;
-      align-items:center;   /* center logo + text block vertically */
+      align-items:center;
       gap:14px;
       margin-bottom:12px;
     }
     .header-logo{
       width:auto; height:var(--logo);
       flex:0 0 auto;
+      margin-bottom:2px; /* ✅ tiny nudge so logo floor matches text */
     }
     .titles{
       display:flex; flex-direction:column; justify-content:center;
