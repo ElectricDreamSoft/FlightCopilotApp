@@ -10,7 +10,7 @@
     :root{
       --bg:#000; --fg:#f5f5f7; --muted:#a1a1a6;
       --grad-a:#9ee7ff; --grad-b:#b49bff; --grad-c:#ff7ad9; --grad-d:#ffd27a;
-      --logo:56px;        /* header logo height + titles block height */
+      --logo:56px;        /* header logo height */
       --footerW:220px;    /* shared width for footer logo and © text */
     }
     body{
@@ -24,19 +24,16 @@
     /* Header */
     .header{
       display:flex;
-      align-items:center;      /* center logo and titles vertically */
+      align-items:center;   /* ✅ align logo + text block vertically */
       gap:14px;
       margin-bottom:12px;
-      min-height:var(--logo);
     }
     .header-logo{
       width:auto; height:var(--logo);
       flex:0 0 auto;
     }
     .titles{
-      height:var(--logo);
-      display:flex; flex-direction:column;
-      justify-content:space-between;  /* title at top, subtitle at bottom */
+      display:flex; flex-direction:column; justify-content:center;
     }
     .header-title{
       margin:0;
@@ -47,7 +44,7 @@
       line-height:1.1;
     }
     .header-sub{
-      margin:0;
+      margin:2px 0 0;
       color:var(--fg);
       font-weight:700;
       font-size:clamp(18px,3vw,22px);
@@ -66,13 +63,13 @@
       margin-top:40px; text-align:center; color:var(--muted);
     }
     .footer-logo{
-      width:var(--footerW); height:auto; margin:16px auto 8px; display:block;
+      width:var(--footerW); height:auto; margin:12px auto 4px; display:block; /* ✅ tighter spacing */
     }
     .copyright{
-      display:block; width:var(--footerW); margin:0 auto; text-align:center; font-size:14px;
+      display:block; width:var(--footerW); margin:0 auto 6px; text-align:center; font-size:14px;
     }
     .footer-rule{
-      height:1px; width:var(--footerW); margin:16px auto 0; border-radius:999px; opacity:.95;
+      height:1px; width:var(--footerW); margin:12px auto 0; border-radius:999px; opacity:.95;
       background:linear-gradient(90deg,var(--grad-a),var(--grad-b),var(--grad-c),var(--grad-d));
     }
   </style>
@@ -91,7 +88,7 @@
 
       <p class="muted">Last updated: <span id="d"></span></p>
 
-      <!-- ORIGINAL COPY START (unchanged except email) -->
+      <!-- ORIGINAL COPY START -->
       <p><em>Flight CoPilot</em> is published by Electric Dream Software Ltd (“we”). We respect your privacy and keep this policy concise and clear.</p>
 
       <h2>1. Data Collection</h2>
