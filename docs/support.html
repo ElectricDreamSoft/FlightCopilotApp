@@ -6,28 +6,43 @@
   <title>Support – Flight CoPilot</title>
   <meta name="theme-color" content="#000000" />
   <style>
-    :root{--bg:#000;--fg:#f5f5f7;--muted:#a1a1a6;}
+    :root{
+      --bg:#000;--fg:#f5f5f7;--muted:#a1a1a6;
+      --grad-a:#9ee7ff;--grad-b:#b49bff;--grad-c:#ff7ad9;--grad-d:#ffd27a;
+      --footerW:260px;
+    }
     body{margin:0;background:var(--bg);color:var(--fg);
       font:16px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif}
-    main{min-height:100svh;display:grid;place-items:center;padding:40px 20px}
-    .card{max-width:720px;width:100%;text-align:center}
-    .logo{width:180px;margin:0 auto 12px;display:block}
-    h1{margin:0 0 8px;font-weight:700;letter-spacing:.2px;font-size:24px;text-transform:uppercase}
-    p{margin:8px 0}
+    main{min-height:100svh;display:grid;place-items:start center;padding:40px 20px}
+    .container{max-width:720px;width:100%}
+    .logo-copilot{width:90px;margin:0 auto 12px;display:block}
+    h1{margin:0 0 8px;font-weight:700;letter-spacing:.2px;font-size:24px;text-transform:uppercase;text-align:center}
+    p{text-align:center;margin:8px 0}
     a{color:#9ecbff;text-decoration:none} a:hover{text-decoration:underline}
-    .muted{color:var(--muted);font-size:14px;margin-top:16px}
+    .muted{color:var(--muted);font-size:14px;margin-top:16px;text-align:center}
+    footer{margin-top:40px;text-align:center;color:var(--muted)}
+    .footer-logo{width:var(--footerW);height:auto;margin:10px auto 6px;display:block}
+    .copyright{display:block;width:var(--footerW);margin:0 auto 6px;font-size:14px}
+    .footer-rule{height:1px;width:var(--footerW);margin:12px auto 0;border-radius:999px;opacity:.95;
+      background:linear-gradient(90deg,var(--grad-a),var(--grad-b),var(--grad-c),var(--grad-d))}
   </style>
 </head>
 <body>
   <main>
-    <section class="card">
-      <img class="logo" src="img/logo_copilot.png" alt="Flight CoPilot logo" />
+    <div class="container">
+      <img class="logo-copilot" src="img/logo_copilot.png" alt="Flight CoPilot logo" />
       <h1>Flight CoPilot Support</h1>
       <p>For questions, bug reports, or feature requests, email:</p>
       <p><a href="mailto:hello@electricdreamsoftware.com">hello@electricdreamsoftware.com</a></p>
       <p class="muted">Response target: within 3 business days.</p>
       <p class="muted"><a href="/privacy.html">Privacy Policy</a></p>
-    </section>
+
+      <footer>
+        <img class="footer-logo" src="img/logo.png" alt="Electric Dream Software logo" />
+        <span class="copyright">© 2025 Electric Dream Software Ltd. All rights reserved.</span>
+        <div class="footer-rule" aria-hidden="true"></div>
+      </footer>
+    </div>
   </main>
 </body>
 </html>
